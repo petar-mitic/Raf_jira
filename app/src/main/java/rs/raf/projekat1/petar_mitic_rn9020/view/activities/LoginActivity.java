@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,8 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText editUsername, editEmail, editPassword;
     Button btnLogin;
+    public static final String PREFERENCES_USERNAME = "username";
+    public static final String PREFERENCES_EMAIL = "email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Morate popuniti sva polja", Toast.LENGTH_SHORT).show();
                 }else if(editPassword.getText().toString().length() < 5){
                     Toast.makeText(LoginActivity.this, "Password mora biti duzi od 5 karaktera", Toast.LENGTH_SHORT).show();
+                }else if(!Patterns.EMAIL_ADDRESS.matcher(editEmail.getText().toString()).matches()){
+                    Toast.makeText(LoginActivity.this, "Pogresan format email adrese", Toast.LENGTH_SHORT).show();
                 }else{
                     login(editUsername.getText().toString(), editEmail.getText().toString(), editPassword.getText().toString());
                 }
@@ -59,19 +64,17 @@ public class LoginActivity extends AppCompatActivity {
     private void login(String username, String email, String password){
         if(password.equals("123456") && username.startsWith("user")) {
             SharedPreferences sharedPreferences = getSharedPreferences(SplashActivity.PREFERENCES_LOGIN, MODE_PRIVATE);
-            sharedPreferences.edit().putString("username", username).apply();
-            sharedPreferences.edit().putString("email", email).apply();
-            sharedPreferences.edit().putString("password", password).apply();
-            sharedPreferences.edit().putString("login", "user").apply();
+            sharedPreferences.edit().putString(PREFERENCES_USERNAME, username).apply();
+            sharedPreferences.edit().putString(PREFERENCES_EMAIL, email).apply();
+            sharedPreferences.edit().putString(SplashActivity.PREFERENCES_LOGIN, "user").apply();
             Intent i = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(i);
             finish();
         } else if(password.equals("123456") && username.startsWith("admin")){
             SharedPreferences sharedPreferences = getSharedPreferences(SplashActivity.PREFERENCES_LOGIN, MODE_PRIVATE);
-            sharedPreferences.edit().putString("username", username).apply();
-            sharedPreferences.edit().putString("email", email).apply();
-            sharedPreferences.edit().putString("password", password).apply();
-            sharedPreferences.edit().putString("login", "admin").apply();
+            sharedPreferences.edit().putString(PREFERENCES_USERNAME, username).apply();
+            sharedPreferences.edit().putString(PREFERENCES_EMAIL, email).apply();
+            sharedPreferences.edit().putString(SplashActivity.PREFERENCES_LOGIN, "admin").apply();
             Intent i = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(i);
             finish();
