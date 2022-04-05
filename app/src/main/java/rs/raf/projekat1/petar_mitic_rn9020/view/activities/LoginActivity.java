@@ -64,16 +64,20 @@ public class LoginActivity extends AppCompatActivity {
     private void login(String username, String email, String password){
         if(password.equals("123456") && username.startsWith("user")) {
             SharedPreferences sharedPreferences = getSharedPreferences(SplashActivity.PREFERENCES_LOGIN, MODE_PRIVATE);
-            sharedPreferences.edit().putString(PREFERENCES_USERNAME, username).apply();
-            sharedPreferences.edit().putString(PREFERENCES_EMAIL, email).apply();
+            SharedPreferences sharedPreferences1 = getSharedPreferences(PREFERENCES_USERNAME, MODE_PRIVATE);
+            SharedPreferences sharedPreferences2 = getSharedPreferences(PREFERENCES_EMAIL, MODE_PRIVATE);
+            sharedPreferences1.edit().putString(PREFERENCES_USERNAME, username).apply();
+            sharedPreferences2.edit().putString(PREFERENCES_EMAIL, email).apply();
             sharedPreferences.edit().putString(SplashActivity.PREFERENCES_LOGIN, "user").apply();
             Intent i = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(i);
             finish();
         } else if(password.equals("123456") && username.startsWith("admin")){
             SharedPreferences sharedPreferences = getSharedPreferences(SplashActivity.PREFERENCES_LOGIN, MODE_PRIVATE);
-            sharedPreferences.edit().putString(PREFERENCES_USERNAME, username).apply();
-            sharedPreferences.edit().putString(PREFERENCES_EMAIL, email).apply();
+            SharedPreferences sharedPreferences1 = getSharedPreferences(PREFERENCES_USERNAME, MODE_PRIVATE);
+            SharedPreferences sharedPreferences2 = getSharedPreferences(PREFERENCES_EMAIL, MODE_PRIVATE);
+            sharedPreferences1.edit().putString(PREFERENCES_USERNAME, username).apply();
+            sharedPreferences2.edit().putString(PREFERENCES_EMAIL, email).apply();
             sharedPreferences.edit().putString(SplashActivity.PREFERENCES_LOGIN, "admin").apply();
             Intent i = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(i);

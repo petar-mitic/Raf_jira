@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,6 +55,7 @@ public class ProfileFragment extends Fragment {
                 sharedPreferences.edit().clear().apply();
                 sharedPreferences1.edit().clear().apply();
                 sharedPreferences2.edit().clear().apply();
+                Toast.makeText(getActivity(), "Uspesno ste se odlogovali", Toast.LENGTH_SHORT).show();
             }
         });
     }

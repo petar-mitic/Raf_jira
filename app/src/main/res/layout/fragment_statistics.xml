@@ -1,14 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header"
+        android:layout_marginTop="85dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Statistics"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="295dp" />
+        android:text="Raf Jira statistics"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/red"
+        android:id="@+id/toDO"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToDo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/red"
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="320dp"
+        android:textColor="@color/yellow"
+        android:layout_marginRight="30dp"
+        android:id="@+id/number4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="360dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/number5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/number6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="440dp"
+        android:textColor="@color/green"
+        android:layout_marginRight="30dp"
+        android:id="@+id/number7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="480dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/number8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enhancements1"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enhancements"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="520dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/number9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enhancements2"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enhancements"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enhancements3"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enhancements"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bugs1"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bugs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/bugs2"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bugs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bugs3"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bugs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/inProgress"
+        android:textColor="@color/yellow"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/done"
+        android:textColor="@color/green"
+        android:layout_marginTop="440dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number2"
+        android:layout_marginTop="240dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="280dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package rs.raf.projekat1.petar_mitic_rn9020.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
