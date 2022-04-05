@@ -7,7 +7,9 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4645" />
         <entry key="app/src/main/res/drawable/ic_baseline_description_24.xml" value="0.305" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.305" />
+        <entry key="app/src/main/res/drawable/ic_logout_pic.xml" value="0.4645" />
         <entry key="app/src/main/res/drawable/ic_menu1.xml" value="0.4645" />
+        <entry key="app/src/main/res/drawable/ic_menu2.xml" value="0.4645" />
         <entry key="app/src/main/res/drawable/ic_menu3.xml" value="0.4645" />
         <entry key="app/src/main/res/drawable/ic_menu4.xml" value="0.4645" />
         <entry key="app/src/main/res/drawable/login_pic_background.xml" value="0.4645" />
@@ -15,10 +17,14 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.5354166666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5155709342560554" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.5354166666666667" />
+        <entry key="app/src/main/res/layout/fragment_done_ticket.xml" value="0.5354166666666667" />
+        <entry key="app/src/main/res/layout/fragment_donet_ticket.xml" value="0.5354166666666667" />
+        <entry key="app/src/main/res/layout/fragment_inprogress_ticket.xml" value="0.5354166666666667" />
         <entry key="app/src/main/res/layout/fragment_new.xml" value="0.5630208333333333" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.5630208333333333" />
         <entry key="app/src/main/res/layout/fragment_statistics.xml" value="0.5630208333333333" />
         <entry key="app/src/main/res/layout/fragment_tickets.xml" value="0.5630208333333333" />
+        <entry key="app/src/main/res/layout/fragment_todo_ticket.xml" value="0.5354166666666667" />
         <entry key="app/src/main/res/layout/statistics.xml" value="0.5630208333333333" />
         <entry key="app/src/main/res/menu/navigation_bottom.xml" value="0.5630208333333333" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/login_pic.xml" value="0.4645" />
