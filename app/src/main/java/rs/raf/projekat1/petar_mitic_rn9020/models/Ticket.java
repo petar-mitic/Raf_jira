@@ -10,7 +10,7 @@ public class Ticket {
     private String priority;
     private String state;
 
-    public Ticket(int id, int days, String title, String description, String type, String priority, String state) {
+    public Ticket(int id, String title, String description, String type, String priority, String state,int days) {
         this.id = id;
         this.days = days;
         this.title = title;
