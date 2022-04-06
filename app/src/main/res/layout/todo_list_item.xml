@@ -34,7 +34,7 @@
         android:layout_marginStart="16dp"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonPlustodo"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_width="40dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonMinustodo"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
         android:layout_width="40dp"

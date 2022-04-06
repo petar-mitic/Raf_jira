@@ -62,12 +62,12 @@
 
     <EditText
         android:id="@+id/days"
+        android:inputType="number"
         android:layout_marginTop="230dp"
         android:layout_marginRight="30dp"
         android:layout_width="40dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Est."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

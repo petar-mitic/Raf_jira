@@ -1,6 +1,8 @@
 package rs.raf.projekat1.petar_mitic_rn9020.view.fragments;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -37,9 +39,34 @@ public class InProgressTicketFragment extends Fragment {
     }
     private void init(View view) {
         initView(view);
-//        initListeners();
+        initListeners();
         initObservers();
         initRecycler();
+    }
+
+    private void initListeners() {
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                ticketViewModel.filterTicketsInProgress(s.toString());
+            }
+        });
+
+//        addBtn.setOnClickListener(v -> {
+//            showAddSnackBar(
+//                    recyclerViewModel.addCar("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9vMHQzf3GMYiI2WnYG9TUKnGAQFevruSgJF35VLAJe_odBMVd&usqp=CAU",
+//                            "Ikea",
+//                            "LILLABO")
+//            );
+//        });
     }
 
     private void initView(View view) {

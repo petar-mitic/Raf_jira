@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import rs.raf.projekat1.petar_mitic_rn9020.models.Ticket;
 
@@ -21,15 +22,15 @@ public class TicketViewModel extends ViewModel {
 
     public TicketViewModel(){
         for (int i = 0; i < counter; i++) {
-            Ticket ticket = new Ticket(i, "Ticket" + i, "Description" + i, "bug" , "High", "todo", 10);
+            Ticket ticket = new Ticket(i, "Ticket_ToDo_" + i, "Description" + i, "bug" , "High", "todo", 10);
             toDoTicketsList.add(ticket);
         }
         for (int i = 0; i < counter; i++) {
-            Ticket ticket = new Ticket(i, "Ticket" + i, "Description" + i, "bug" , "Low", "inprogress", 8);
+            Ticket ticket = new Ticket(i, "Ticket_InProgress_" + i, "Description" + i, "bug" , "Low", "inprogress", 8);
             inProgressTicketsList.add(ticket);
         }
         for (int i = 0; i < counter; i++) {
-            Ticket ticket = new Ticket(i, "Ticket" + i, "Description" + i, "Enhancement" , "Low", "done", 8);
+            Ticket ticket = new Ticket(i, "Ticket_Done_" + i, "Description" + i, "Enhancement" , "Low", "done", 8);
             doneTicketsList.add(ticket);
         }
         ArrayList<Ticket> toDoListToSubmit = new ArrayList<>(toDoTicketsList);
@@ -82,5 +83,26 @@ public class TicketViewModel extends ViewModel {
             ArrayList<Ticket> doneListToSubmit = new ArrayList<>(doneTicketsList);
             doneTickets.setValue(doneTicketsList);
         }
+    }
+
+    public void filterTicketsToDo(String filter) {
+        List<Ticket> filteredList = toDoTicketsList.stream().filter(ticket -> ticket.getTitle().toLowerCase().startsWith(filter.toLowerCase())).collect(Collectors.toList());
+        toDoTickets.setValue(filteredList);
+    }
+    public void filterTicketsInProgress(String filter) {
+        List<Ticket> filteredList = inProgressTicketsList.stream().filter(ticket -> ticket.getTitle().toLowerCase().startsWith(filter.toLowerCase())).collect(Collectors.toList());
+        inProgressTickets.setValue(filteredList);
+    }
+
+    public ArrayList<Ticket> getToDoTicketsList() {
+        return toDoTicketsList;
+    }
+
+    public ArrayList<Ticket> getInProgressTicketsList() {
+        return inProgressTicketsList;
+    }
+
+    public ArrayList<Ticket> getDoneTicketsList() {
+        return doneTicketsList;
     }
 }

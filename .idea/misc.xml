@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.5354166666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5155709342560554" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.5354166666666667" />
+        <entry key="app/src/main/res/layout/done_list_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_done_ticket.xml" value="0.5354166666666667" />
         <entry key="app/src/main/res/layout/fragment_donet_ticket.xml" value="0.5354166666666667" />
         <entry key="app/src/main/res/layout/fragment_inprogress_ticket.xml" value="0.5354166666666667" />
