@@ -63,13 +63,6 @@ public class ToDoTicketFragment extends Fragment {
             }
         });
 
-//        addBtn.setOnClickListener(v -> {
-//            showAddSnackBar(
-//                    recyclerViewModel.addCar("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9vMHQzf3GMYiI2WnYG9TUKnGAQFevruSgJF35VLAJe_odBMVd&usqp=CAU",
-//                            "Ikea",
-//                            "LILLABO")
-//            );
-//        });
     }
     private void initView(View view) {
         recyclerView = view.findViewById(R.id.listRv0);

@@ -75,9 +75,6 @@ public class NewFragmet extends Fragment {
                             "todo",
                             Integer.parseInt(days.getText().toString()));
                     ticketViewModel.addTicket(ticket);
-                    System.out.println(spinner1.getSelectedItem().toString());
-                    System.out.println(spinner2.getSelectedItem().toString());
-
                 }
             }
         });
@@ -95,7 +92,4 @@ public class NewFragmet extends Fragment {
         ticketTitle.setText("");
         ticketDescription.setText("");
     }
-
-
-
 }

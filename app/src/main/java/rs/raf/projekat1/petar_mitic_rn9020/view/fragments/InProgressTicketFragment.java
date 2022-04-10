@@ -60,13 +60,6 @@ public class InProgressTicketFragment extends Fragment {
             }
         });
 
-//        addBtn.setOnClickListener(v -> {
-//            showAddSnackBar(
-//                    recyclerViewModel.addCar("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9vMHQzf3GMYiI2WnYG9TUKnGAQFevruSgJF35VLAJe_odBMVd&usqp=CAU",
-//                            "Ikea",
-//                            "LILLABO")
-//            );
-//        });
     }
 
     private void initView(View view) {
@@ -79,39 +72,7 @@ public class InProgressTicketFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(inProgressAdapter);
     }
-//
-//    private void initListeners() {
-//        editText.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//                recyclerViewModel.filterCars(s.toString());
-//            }
-//        });
-//
-//        addBtn.setOnClickListener(v -> {
-//            showAddSnackBar(
-//                    recyclerViewModel.addCar("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9vMHQzf3GMYiI2WnYG9TUKnGAQFevruSgJF35VLAJe_odBMVd&usqp=CAU",
-//                            "Ikea",
-//                            "LILLABO")
-//            );
-//        });
-//    }
-//
-//    private void showAddSnackBar(int id) {
-//        Snackbar
-//                .make(mainLayout, "Item added", Snackbar.LENGTH_SHORT)
-//                .setAction("Undo", view -> recyclerViewModel.removeCar(id))
-//                .show();
-//    }
-//
+
     private void initObservers() {
         ticketViewModel.getInProgressTickets().observe(getViewLifecycleOwner(), tickets -> {
             inProgressAdapter.submitList(tickets);
